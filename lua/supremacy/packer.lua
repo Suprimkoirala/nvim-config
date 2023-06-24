@@ -83,6 +83,8 @@ use(
   'nvim-lualine/lualine.nvim',
   requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 }
+use('nvim-tree/nvim-web-devicons')
+
 
 --icons theme
 use {
@@ -93,8 +95,7 @@ use {
       -- config
     }
   end,
-  requires = {'nvim-tree/nvim-web-devicons'}
-}
+  }
  use{'barrett-ruth/live-server.nvim'}
  use({
     "kylechui/nvim-surround",
@@ -112,8 +113,24 @@ use ({"ziontee113/color-picker.nvim",
         require("color-picker")
     end,
 })
+    use {
+	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+}
     use( "lukas-reineke/lsp-format.nvim")
     use ('voldikss/vim-floaterm')
+use('KabbAmine/vCoolor.vim')
+use('brenoprata10/nvim-highlight-colors')
 
+use({
+    "kdheepak/lazygit.nvim",
+    -- optional for floating window border decoration
+    requires = {
+        "nvim-lua/plenary.nvim",config = function()
+        require("telescope").load_extension("lazygit")
+    end,
+    },
+})
+use('mg979/vim-visual-multi')
 
 end)
