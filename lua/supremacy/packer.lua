@@ -132,5 +132,6 @@ use({
     },
 })
 use('mg979/vim-visual-multi')
-
+use('folke/tokyonight.nvim')
+    use('ThePrimeagen/vim-be-good')
 end)
