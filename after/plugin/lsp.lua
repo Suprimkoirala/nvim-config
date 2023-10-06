@@ -1,11 +1,21 @@
 local lsp = require("lsp-zero")
 
+local lsp_zero = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
   'tsserver',
   'rust_analyzer',
 })
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  ensure_installed = {
+    },
+  handlers = {
+    lsp_zero.default_setup,
+  },
+})
+
 
 -- Fix Undefined global 'vim'
 --lsp.configure('lua-language-server', {

@@ -87,15 +87,6 @@ use('nvim-tree/nvim-web-devicons')
 
 
 --icons theme
-use {
-  'glepnir/dashboard-nvim',
-  event = 'VimEnter',
-  config = function()
-    require('dashboard').setup {
-      -- config
-    }
-  end,
-  }
  use{'barrett-ruth/live-server.nvim'}
  use({
     "kylechui/nvim-surround",
@@ -132,6 +123,4 @@ use({
     },
 })
 use('mg979/vim-visual-multi')
-use('folke/tokyonight.nvim')
-    use('ThePrimeagen/vim-be-good')
 end)

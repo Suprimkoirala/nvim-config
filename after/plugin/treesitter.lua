@@ -28,13 +28,9 @@ ts.setup {
     "php",
     "json",
     "yaml",
-    "swift",
     "css",
     "html",
     "lua"
-  },
-  autotag = {
-    enable = true,
   },
   context_commentstring = {
     enable         = true,
@@ -46,14 +42,11 @@ ts.setup {
     enable = true,
     keymaps = {
       init_selection = "gnn", -- set to `false` to disable one of the mappings
-      node_incremental = "grn",
-      scope_incremental = "grc",
-      node_decremental = "grm",
+      node_incremental = "gni",
+      scope_incremental = "gnc",
+      node_decremental = "gnm",
     },
   },
 
 }
-
-local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
-parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }
 
