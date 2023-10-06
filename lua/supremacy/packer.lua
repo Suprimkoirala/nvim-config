@@ -27,6 +27,7 @@ return require('packer').startup(function(use)
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
+    use('nvim-tree/nvim-web-devicons')
     use({
 	  'rose-pine/neovim',
 	  as = 'rose-pine',
@@ -123,4 +124,6 @@ use({
     },
 })
 use('mg979/vim-visual-multi')
+use('lewis6991/gitsigns.nvim')
+use "lukas-reineke/indent-blankline.nvim"
 end)
